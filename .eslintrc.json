@@ -1,8 +1,3 @@
 {
-  "extends": "./node_modules/gts/",
-  "rules": {
-    "node/no-unpublished-require": ["error", {
-      "allowModules": [ "@ghnacker/bin-links" ]
-    }]
-  }
+  "extends": "./node_modules/gts/"
 }
