@@ -1,6 +1,6 @@
 {
   "name": "bin-links-to",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "bin-links to target package",
   "main": "built/bin-links-to.js",
   "types": "built/bin-links-to.d.ts",
