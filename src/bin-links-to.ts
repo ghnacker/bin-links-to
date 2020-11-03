@@ -12,7 +12,7 @@ export const binLinksTo = async (from: Paths, to: Paths) => {
   for (const path of toPathList(from)) {
     const pkg = await readPackageJson(resolve(path, 'package.json'));
     for (const top of tops) {
-      promises.push(binLinks({ path, top, pkg }));;
+      promises.push(binLinks({ path, top, pkg }));
     }
   }
   return Promise.all(promises);

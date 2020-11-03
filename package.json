@@ -2,11 +2,17 @@
   "name": "bin-links-to",
   "version": "0.1.1",
   "description": "bin-links to target package",
-  "main": "built/bin-links-to.js",
-  "types": "built/bin-links-to.d.ts",
+  "main": "build/src/bin-links-to.js",
+  "types": "build/src/bin-links-to.d.ts",
   "scripts": {
-    "build": "tsc -p .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -36,6 +42,7 @@
     "@types/glob": "^7.1.3",
     "@types/node": "^14.14.6",
     "@types/yargs": "^15.0.9",
-    "typescript": "^4.0.5"
+    "typescript": "^4.0.5",
+    "gts": "^3.0.2"
   }
 }

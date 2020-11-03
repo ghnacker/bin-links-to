@@ -21,8 +21,7 @@ const argv = yargs
     alias: 'to',
     describe: 'target package directories',
     type: 'array',
-  })
-  .argv;
+  }).argv;
 
 let deps = (argv.bin || []) as string[];
 if (argv.dev) {
@@ -36,5 +35,4 @@ const targets = argv._.concat((argv.to || []) as string[])
   .map(f => glob.sync(f, { nonull: true }))
   .reduce((t, g) => t.concat(g), []);
 
-binLinksTo(bins, targets)
-  .catch(e => { console.warn(e.message); process.exit(1); });
+binLinksTo(bins, targets);
